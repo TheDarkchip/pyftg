@@ -24,3 +24,13 @@ class FrameData:
     
     def get_character(self, player: bool):
         return self.character_data[0 if player else 1]
+    
+    def as_dict(self):
+        return {
+            "character_data": [x.as_dict() for x in self.character_data],
+            "current_frame_number": self.current_frame_number,
+            "current_round": self.current_round,
+            "projectile_data": [x.as_dict() for x in self.projectile_data],
+            "empty_flag": self.empty_flag,
+            "front": self.front.tolist(),
+        }

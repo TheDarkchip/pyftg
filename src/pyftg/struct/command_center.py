@@ -94,6 +94,8 @@ class CommandCenter:
             self.create_keys("2 1 4 _ B")
         elif str == "STAND_D_DF_FC":
             self.create_keys("2 3 6 _ C")
+        elif str == "STAND":
+            self.create_keys("5")
         else:
             self.create_keys(str)
 

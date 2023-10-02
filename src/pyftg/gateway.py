@@ -36,8 +36,10 @@ class Gateway:
             if agent:
                 self.ais[i] = AIController(self.stub, agent, i == 0)
                 self.ais[i].start()
+        """
         for ai in [x for x in self.ais if x]:
             ai.join()
+        """
     
     def close(self):
         self.channel.close()

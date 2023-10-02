@@ -57,3 +57,6 @@ class Action(Enum):
     AIR_D_DB_BA = 53
     AIR_D_DB_BB = 54
     STAND_D_DF_FC = 55
+
+    def __str__(self):
+        return self.name
